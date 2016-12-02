@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11535.1" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qre-WV-TrA" customClass="CollectionNormalCell" customModule="_106_douyu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="253" height="182"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="253" height="182"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="斗鱼直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyC-fH-BUL">
+                        <rect key="frame" x="5" y="163" width="243" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="pfi-xe-a4V">
+                        <rect key="frame" x="0.0" y="0.0" width="253" height="160"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bc-tJ-d47">
+                        <rect key="frame" x="194" y="0.0" width="59" height="14"/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.24919734589041095" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="5" maxY="0.0"/>
+                        <state key="normal" title="6666" image="viewerIcon"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ1-Hh-2IC">
+                        <rect key="frame" x="5" y="142" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="2SH-BG-FOh"/>
+                            <constraint firstAttribute="height" constant="16" id="U8z-t3-HDf"/>
+                        </constraints>
+                        <state key="normal" image="Img_user"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="斗鱼直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7j-Fg-7Vd">
+                        <rect key="frame" x="26" y="144" width="45" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="GJ1-Hh-2IC" firstAttribute="leading" secondItem="Qre-WV-TrA" secondAttribute="leading" constant="5" id="6mS-7A-olg"/>
+                <constraint firstItem="pfi-xe-a4V" firstAttribute="leading" secondItem="Qre-WV-TrA" secondAttribute="leading" id="EGk-sm-EGY"/>
+                <constraint firstAttribute="trailing" secondItem="GyC-fH-BUL" secondAttribute="trailing" constant="5" id="Eo1-qZ-3lf"/>
+                <constraint firstAttribute="bottom" secondItem="GyC-fH-BUL" secondAttribute="bottom" constant="5" id="Fco-71-BOe"/>
+                <constraint firstItem="3Bc-tJ-d47" firstAttribute="top" secondItem="Qre-WV-TrA" secondAttribute="top" id="JmW-1B-kpG"/>
+                <constraint firstItem="GyC-fH-BUL" firstAttribute="top" secondItem="c7j-Fg-7Vd" secondAttribute="bottom" constant="5" id="S2f-Je-GoR"/>
+                <constraint firstItem="c7j-Fg-7Vd" firstAttribute="leading" secondItem="GJ1-Hh-2IC" secondAttribute="trailing" constant="5" id="TgU-J5-bMX"/>
+                <constraint firstAttribute="trailing" secondItem="3Bc-tJ-d47" secondAttribute="trailing" id="djK-lE-gr3"/>
+                <constraint firstAttribute="trailing" secondItem="pfi-xe-a4V" secondAttribute="trailing" id="fDs-wD-2zy"/>
+                <constraint firstAttribute="bottom" secondItem="pfi-xe-a4V" secondAttribute="bottom" constant="22" id="i20-Na-QHw"/>
+                <constraint firstItem="GyC-fH-BUL" firstAttribute="leading" secondItem="Qre-WV-TrA" secondAttribute="leading" constant="5" id="jT7-qS-TTq"/>
+                <constraint firstItem="pfi-xe-a4V" firstAttribute="top" secondItem="Qre-WV-TrA" secondAttribute="top" id="lFn-Bf-wau"/>
+                <constraint firstItem="GyC-fH-BUL" firstAttribute="top" secondItem="GJ1-Hh-2IC" secondAttribute="bottom" constant="5" id="nlL-ra-vjG"/>
+            </constraints>
+            <size key="customSize" width="253" height="182"/>
+            <connections>
+                <outlet property="iconImageView" destination="pfi-xe-a4V" id="IOy-lp-XmO"/>
+                <outlet property="nickNameLabel" destination="c7j-Fg-7Vd" id="cbW-xk-svr"/>
+                <outlet property="onlineBtn" destination="3Bc-tJ-d47" id="sU5-S8-LHd"/>
+                <outlet property="roomNameLabel" destination="GyC-fH-BUL" id="e5K-jh-OAz"/>
+            </connections>
+            <point key="canvasLocation" x="332.5" y="294"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+        <image name="Img_user" width="16" height="16"/>
+        <image name="viewerIcon" width="10" height="8"/>
+    </resources>
+</document>

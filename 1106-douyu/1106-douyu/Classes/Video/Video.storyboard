@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11535.1" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kNw-Bg-4dW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="khp-b6-vD6">
+            <objects>
+                <viewController id="C5u-f4-Z9L" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cKz-r8-9Sj"/>
+                        <viewControllerLayoutGuide type="bottom" id="zIH-LV-jBX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qOG-Fv-QQN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Akp-Zu-ctC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Log-LT-EfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032.8" y="74.212893553223395"/>
+        </scene>
+        <!--视频-->
+        <scene sceneID="NgX-5b-r1I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kNw-Bg-4dW" customClass="CustomNC" customModule="_106_douyu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="视频" image="tabVideo" selectedImage="tabVideoHL" id="qCu-yh-WkD"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jOQ-js-kLU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C5u-f4-Z9L" kind="relationship" relationship="rootViewController" id="yBr-Qr-7qS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8c-LP-zqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="74.212893553223395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabVideo" width="24" height="24"/>
+        <image name="tabVideoHL" width="24" height="24"/>
+    </resources>
+</document>
