@@ -35,7 +35,7 @@ extension HandsVC{
             
             var tempGroups = Array(self.handsVM.anchorGroups[1...15])// 0...15 & tempGroups.removeFirst()
             let moreGroup = AnchorGroup()
-            moreGroup.tag_name = "更多"
+            moreGroup.tag_name = "更多分类"
             tempGroups.append(moreGroup)
             self.menuView.groups = tempGroups
             

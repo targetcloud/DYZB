@@ -21,7 +21,7 @@ class CollectionGameCell: UICollectionViewCell {
             if let iconURL = URL(string: game?.icon_url ?? "") {
                 iconImageView.kf.setImage(with: iconURL)
             } else {
-                iconImageView.image = UIImage(named: "home_more_btn")
+                iconImageView.image = UIImage(named: "home_column_more")//home_more_btn
             }
 //            let iconURL = URL(string: game?.icon_url ?? "")!
 //            iconImageView.kf.setImage(with: iconURL, placeholder: UIImage(named: "home_more_btn"))

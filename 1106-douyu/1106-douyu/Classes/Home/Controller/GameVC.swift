@@ -136,7 +136,7 @@ extension GameVC{
             self.collectionView.reloadData()
             var gameGroups = Array(self.gameVM.anchorGroups[1...15])//0...15 & gameGroups.removeFirst()
             let moreGroup = AnchorGroup()
-            moreGroup.tag_name = "更多"
+            moreGroup.tag_name = "更多分类"
             gameGroups.append(moreGroup)
             self.menuView.groups = gameGroups
             self.loadDataFinished()
