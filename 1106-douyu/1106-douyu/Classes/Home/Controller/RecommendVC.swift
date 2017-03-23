@@ -46,11 +46,12 @@ extension RecommendVC {
             moreGroup.tag_name = "更多"
             gameGroups.append(moreGroup)
             self.gameView.groups = gameGroups
+            self.loadDataFinished()
         }
         recommendVM.requestCycleData {
             self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
-        self.loadDataFinished()
+//        self.loadDataFinished()
     }
 }
 

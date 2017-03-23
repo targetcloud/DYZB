@@ -49,19 +49,19 @@ class CustomNC: UINavigationController {//NC 是 Navigation Controller 缩写
          _gestureEnvironment
          */
         
-        guard let systemGes = interactivePopGestureRecognizer else { return }
-        guard let gesView = systemGes.view else { return }
-        let targets = systemGes.value(forKey: "_targets") as? [NSObject]
+        guard let systemGes = interactivePopGestureRecognizer,let targets = systemGes.value(forKey: "_targets") as? [NSObject],let gesView = systemGes.view else { return }
+//        guard let gesView = systemGes.view else { return }
+//        let targets = systemGes.value(forKey: "_targets") as? [NSObject]
 //        print(targets)
         //Optional(
         //         [(action=handleNavigationTransition:, target=<_UINavigationInteractiveTransition 0x7faa0ff11710>)]
         //)
-        guard let targetObjc = targets?.first else { return }
-        guard let target = targetObjc.value(forKey: "target") else { return }
-        let action = Selector(("handleNavigationTransition:"))//guard let action = targetObjc.value(forKey: "action") as? Selector else {return} 不能这样写
-        let panGes = UIPanGestureRecognizer()
-        panGes.addTarget(target, action: action)
-        gesView.addGestureRecognizer(panGes)
+        guard let targetObjc = targets.first,let target = targetObjc.value(forKey: "target") else { return }
+//        guard let target = targetObjc.value(forKey: "target") else { return }
+//        let action = Selector(("handleNavigationTransition:"))//guard let action = targetObjc.value(forKey: "action") as? Selector else {return} 不能这样写
+//        let panGes = UIPanGestureRecognizer()
+//        panGes.addTarget(target, action: action)
+        gesView.addGestureRecognizer(UIPanGestureRecognizer(target:target, action: Selector(("handleNavigationTransition:"))))
     }
 
     override func didReceiveMemoryWarning() {
