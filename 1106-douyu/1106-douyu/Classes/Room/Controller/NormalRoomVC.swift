@@ -36,6 +36,36 @@ class NormalRoomVC: UIViewController,UIGestureRecognizerDelegate {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    override func  viewDidAppear(_ animated: Bool) {
+        let emitter = CAEmitterLayer()
+        emitter.emitterPosition = CGPoint(x: view.bounds.width * 0.8, y: view.frame.height * 0.9)
+        emitter.preservesDepth = true
+        
+        let cell = CAEmitterCell()
+        cell.birthRate = 2
+        
+        cell.lifetime = 7
+        cell.lifetimeRange = 2
+        
+        cell.scale = 0.7
+        cell.scaleRange = 0.2
+        
+        cell.emissionLongitude = CGFloat( M_PI + M_PI_2)
+        cell.emissionRange = CGFloat(M_PI_2/3)
+        
+        cell.velocity = 50
+        cell.velocityRange = 20
+        
+        cell.spin = 0.1
+        cell.spinRange = 0.1
+        
+        cell.contents = UIImage(named: "me_other_followed")?.cgImage
+        
+        emitter.emitterCells = [cell]
+        
+        view.layer.addSublayer(emitter)
+    }
 }
 
 extension NormalRoomVC{

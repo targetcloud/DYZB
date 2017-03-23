@@ -49,14 +49,17 @@ class CustomNC: UINavigationController {//NC 是 Navigation Controller 缩写
          _gestureEnvironment
          */
         
-        guard let systemGes = interactivePopGestureRecognizer,let targets = systemGes.value(forKey: "_targets") as? [NSObject],let gesView = systemGes.view else { return }
+        guard let systemGes = interactivePopGestureRecognizer,
+            let targets = systemGes.value(forKey: "_targets") as? [NSObject],
+            let targetObjc = targets.first,let target = targetObjc.value(forKey: "target"),
+            let gesView = systemGes.view else { return }
 //        guard let gesView = systemGes.view else { return }
 //        let targets = systemGes.value(forKey: "_targets") as? [NSObject]
 //        print(targets)
         //Optional(
         //         [(action=handleNavigationTransition:, target=<_UINavigationInteractiveTransition 0x7faa0ff11710>)]
         //)
-        guard let targetObjc = targets.first,let target = targetObjc.value(forKey: "target") else { return }
+//        guard let targetObjc = targets.first,let target = targetObjc.value(forKey: "target") else { return }
 //        guard let target = targetObjc.value(forKey: "target") else { return }
 //        let action = Selector(("handleNavigationTransition:"))//guard let action = targetObjc.value(forKey: "action") as? Selector else {return} 不能这样写
 //        let panGes = UIPanGestureRecognizer()
@@ -72,6 +75,10 @@ class CustomNC: UINavigationController {//NC 是 Navigation Controller 缩写
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         viewController.hidesBottomBarWhenPushed = true
         super.pushViewController(viewController, animated: animated)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 
 }
